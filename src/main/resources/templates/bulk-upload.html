@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bulkupload Home</title>
+</head>
+<body>
+
+<h2>Bulkupload Home</h2>
+
+
+
+<form action="#"
+      th:action="@{/api/bulkupload/employee}"
+      enctype="multipart/form-data"
+      method="post">
+
+    <input type="file"
+           name="file"
+           class="form-control"
+           id="upload-file"
+           placeholder="Upload Your file" />
+    <br>
+    <br>
+    <input type="text"
+           name="defaultPassword"
+           class="form-control"
+           id="default-password"
+    placeholder="provide your default password" />
+    <br>
+    <br>
+    <input type="submit"
+           class="btn btn-primary"
+           value="Upload">
+</form>
+
+
+</body>
+</html>
