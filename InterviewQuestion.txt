@@ -113,7 +113,60 @@ Comparator(I):
 
 Spring
 --------------------------------------------------------------------
+Dependency Injection
+Inversion of Control
+ApplicationContext or BeanFactory
+Configuration
+Bean Creation
 
+Stereotype annotation
+    @Component
+    @Controller
+    @Service
+    @Repository
+
+Spring Java Configuration
+    @Configuration
+    @ComponentScan
+    @Bean
+
+REST Api
+    @RestController
+    @RequestBody
+    @ResponseBody
+    @GetMapping
+    @PostMapping
+    @PutMapping
+    @DeleteMapping
+    @CrossOrigin
+    @RequestMapping
+
+Spring Data JPA
+    @Entity
+    @Table
+    @Id
+    @GeneratedValue
+    @Column
+    Repository(I)
+    CrudRepository(I)
+    JpaRepository(I)
+    DataSource
+    EntityManager
+
+Spring Transaction Management
+    @Transactional
+
+Spring Bean Lifecycle
+    @PostConstruct
+    @PreDestroy
 
 Spring Boot
---------------------------------------------------------------------
+    @SpringBootApplication
+    @SpringBootConfiguration
+    @EnableAutoConfiguration
+
+
+Spring Exception Handling
+    @RestControllerAdvice
+
+
