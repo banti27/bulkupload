@@ -1,0 +1,119 @@
+Java 
+--------------------------------------------------------------------
+OOPs Concept:
+	Inheritance: extends or implements
+		1: Class can inherit from another class via extends
+		2: Class can inherit from another interfaces via implements
+		3: Interface can inherit from another interfaces via extends
+		4: Fields or Methods
+	Polymorphism:
+		1: Overloading and Overriding of methods
+		2: Field can be overriden
+		3: Overloading is compile time polymorhism
+		4: Overriding is runtime polymorphism
+		5: Overloading is done in same class [Arrys ==> sort()//int, byte, short float]
+		6: Overriding is done to provide change the implementation of parent class methods for our business use case. [Object => hashcode(), equals()] [Comparator or Comparable methods has to be ovveriden for custom sorting]
+	Abstraction:
+		1: It can achive via interfaces or abstract classes.[via abstract methods]
+		2: From Java 8 interfaces are allowed to have [default and static methods] also so implementation classes has to provide the the exact reference while overriding the method.
+		3: Functional interface: [Only one abstract method is allowed]
+	Encapsulation:
+		1: Encapsulation is a way of hiding the implementation details of a class from outside access and only exposing a public interface that can be used to interact with the class.
+		
+Execption Handling:
+	Throwable(Parent class):
+		Error(UnChecked Exception/ Run time Exception): We should not catch it
+		Exception(Checked Exception/ Compile time Exception): We must these type of exception. IOException, FileNotFoundException
+			RuntimeException(UnChecked Exception/ Run time Exception): 
+				NullPointerException, SqlException, IllegalArgumentException
+	
+	// possible
+	try{
+	}catch(){
+	}
+	
+	try {
+	}finally {
+	}
+	
+	try {
+	}cathc(Exception e){
+	} finally {
+	}
+	
+	// not possible
+	try {
+	}
+	
+	// How to throw a exception from a mehtod?
+	thow new YourExcepotionName();
+	
+	if the exception is a Checked exeption then method also has to thorws it.
+	
+	void custom() throws CheckExcepition {
+	
+		throw new CheckExcepition();
+		
+	}
+	
+	void custom() {
+	
+		try {
+		
+			throw new CheckExcepition();
+			
+		} catch(CheckExcepition ex) {
+			ex.printStackTrace();
+		}
+		
+		
+	}
+	
+	void custom() {
+	
+		throw new UnCheckExcepition();
+		
+	}
+	
+Collection Framework:
+	Collection(I):
+	    List(I): collection of objects.
+	        1: duplicate elements are allowed
+	        2: insertion order is preserved
+	        ArrayList(C): internal data structure "array"
+	            1: read operation O(1) constant time
+	            2: write/update operation O(1) constant time
+	            3: remove Operation O(n) linear time
+	        LinkedList(C): internal data structure "node"
+	            1: read operation O(n) linear time
+                2: write/update operation
+                    2.1: write an element in simple O(1)
+                    2.2: writing at given index or update is O(n)
+                3: remove Operation O(n) linear time
+	    Set(I): Collection of unique objects. Duplicate values are not allowed. With the help of equals() we check the equality of abstract data type.
+	        If you want to add any object in set we should, must override hasCode() and equals()
+	        If two objects are equal according to the equals() method, then calling the hashCode method on each of the two objects must produce the same integer result.
+	        HashSet(C): internal data structure "hashmap" | insertion order is not preserved | one null value allowed
+	        LinkedHashSet(C): internal data structure "linkedHashmap" | insertion order is preserved(doubly linked list) | one null value allowed
+	        TreeSet(C): internal data structure "treemap" | Elements are sorted ? Element Must be comparable OR you need to provide comparator in the constructor
+	                    | null value NOT allowed.
+
+	Map<K,V>:
+	    HasMap: insertion order is not preserved | one null value allowed
+	    LinkedHashMap: insertion order is preserved(doubly linked list) | one null value allowed
+	    TreeMap: Elements are sorted on keys ? Key Must be comparable OR you need to provide comparator in the constructor
+                 	                    | null value NOT allowed.
+
+Comparable(I):
+    int compareTo(T o);
+
+Comparator(I):
+    int compare(T o1, T o2);
+    Used for custom comparison
+
+Spring
+--------------------------------------------------------------------
+
+
+Spring Boot
+--------------------------------------------------------------------
